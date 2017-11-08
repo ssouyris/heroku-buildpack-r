@@ -121,6 +121,20 @@ function patch_chroot() {
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/lib/fakechroot/libfakechroot.la"
 }
 
+
+
+# parse and derive params
+BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+echo "BUILDPACK_DIR: $BUILDPACK_DIR"
+echo "BUILD_DIR: $BUILD_DIR"
+echo "CACHE_DIR: $CACHE_DIR"
+echo "ENV_DIR: $ENV_DIR"
+
+
 dirA="$PWD"
 cd "$dirA"
 
@@ -159,11 +173,7 @@ echo "***** end in directory *************"
 cd "$dirA"
 
 
-# parse and derive params
-BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
-BUILD_DIR=$1
-CACHE_DIR=$2
-ENV_DIR=$3
+
 
 # fix STACK variable if unset
 if [ -z "${STACK}" ]; then
