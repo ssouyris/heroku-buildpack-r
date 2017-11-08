@@ -121,6 +121,9 @@ function patch_chroot() {
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/lib/fakechroot/libfakechroot.la"
 }
 
+dirA="$PWD"
+cd "$dirA"
+
 #### Install db2 driver
 echo "**** start in directory***********"
 ls
@@ -137,18 +140,14 @@ pwd
 echo "***** end in directory *************"
 echo " ----------- cd dsdriver" | indent
 cd dsdriver
+dirB="$PWD"
 echo "**** start in directory***********"
 ls
 pwd
 echo "***** end in directory *************"
-#echo " ----------- cd installDSDriver" | indent
-#cd installDSDriver
-#echo "**** start in directory***********"
-#ls
-#pwd
-#echo "***** end in directory *************"
-echo " ----------- ./installDSDriver" | indent
-./installDSDriver
+echo " ----------- "$dirB"/installDSDriver" | indent
+runinstallDSDriver = "$dirB/installDSDriver"
+$runinstallDSDriver
 echo " ----------- ../db2profile" | indent
 ../db2profile
 echo "***** Out Install driver *************"
@@ -158,7 +157,7 @@ pwd
 echo "***** end in directory *************"
 ####
 
-
+cd "$dirA"
 
 
 # parse and derive params
