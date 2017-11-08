@@ -127,10 +127,15 @@ ls
 pwd
 echo "***** end in directory *************"
 echo "***** Install driver *************"
+echo " ----------- gunzip ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz" | indent
 gunzip ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
+echo " ----------- tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar" | indent
 tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar
+echo " ----------- cd dsdriver" | indent
 cd dsdriver
+echo " ----------- ./installDSDriver" | indent
 ./installDSDriver
+echo " ----------- ../db2profile" | indent
 ../db2profile
 echo "***** Out Install driver *************"
 echo "**** start in directory***********"
