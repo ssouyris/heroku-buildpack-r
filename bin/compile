@@ -135,7 +135,6 @@ echo "**** start in directory***********"
 ls
 pwd
 echo "***** end in directory *************"
-<<<<<<< HEAD
 #echo " ----------- cd dsdriver" | indent
 #cd dsdriver
 #echo "**** start in directory***********"
@@ -148,22 +147,7 @@ echo "***** end in directory *************"
 #ls
 #pwd
 #echo "***** end in directory *************"
-#echo " ----------- ./installDSDriver" | indent
-=======
-echo " ----------- cd dsdriver" | indent
-cd dsdriver
-echo "**** start in directory***********"
-ls
-pwd
-echo "***** end in directory *************"
-echo " ----------- cd installDSDriver" | indent
-cd installDSDriver
-echo "**** start in directory***********"
-ls
-pwd
-echo "***** end in directory *************"
 echo " ----------- ./installDSDriver" | indent
->>>>>>> 64bb77febb1b9768df73df4d42c88839bcf048e8
 ./installDSDriver
 echo " ----------- ../db2profile" | indent
 ../db2profile
