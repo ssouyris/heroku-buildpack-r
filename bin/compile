@@ -125,12 +125,12 @@ function patch_chroot() {
 echo "**** start in directory"
 ls
 echo "***** end in directory"
-gunzip ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
-tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar
-cd dsdriver
-./installDSDriver
-../db2profile
-cd ~
+#gunzip ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
+#tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar
+#cd dsdriver
+#./installDSDriver
+#../db2profile
+#cd ~
 ####
 
 
