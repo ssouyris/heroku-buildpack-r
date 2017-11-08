@@ -121,6 +121,23 @@ function patch_chroot() {
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/lib/fakechroot/libfakechroot.la"
 }
 
+
+
+#### Install db2 driver
+echo "**** start in directory"
+ls
+echo "end in directory"
+gunzip ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
+tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar
+cd dsdriver
+./installDSDriver
+../db2profile
+cd ..
+####
+
+
+
+
 # parse and derive params
 BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILD_DIR=$1
