@@ -131,8 +131,16 @@ echo " ----------- gunzip ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
 gunzip ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
 echo " ----------- tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar" | indent
 tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar
+echo "**** start in directory***********"
+ls
+pwd
+echo "***** end in directory *************"
 echo " ----------- cd dsdriver" | indent
 cd dsdriver
+echo "**** start in directory***********"
+ls
+pwd
+echo "***** end in directory *************"
 echo " ----------- ./installDSDriver" | indent
 ./installDSDriver
 echo " ----------- ../db2profile" | indent
