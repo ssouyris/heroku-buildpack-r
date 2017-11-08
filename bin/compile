@@ -130,7 +130,7 @@ tar -xvf ibm_data_server_driver_package_linuxx64_v11.1.1.tar
 cd dsdriver
 ./installDSDriver
 ../db2profile
-cd ..
+cd ~
 ####
 
 
