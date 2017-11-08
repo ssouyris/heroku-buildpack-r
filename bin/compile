@@ -115,7 +115,7 @@ function patch_chroot() {
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/bin/env.fakechroot"
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/bin/fakechroot"
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/bin/ldd.fakechroot"
-  sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fak+echroot/etc/fakechroot/chroot.env"
+  sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/etc/fakechroot/chroot.env"
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/etc/fakechroot/debootstrap.env"
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/etc/fakechroot/rinse.env"
   sed -i "s#$old#$new#g" "$BUILD_DIR/.tools/fakechroot/lib/fakechroot/libfakechroot.la"
