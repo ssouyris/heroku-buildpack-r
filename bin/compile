@@ -153,12 +153,11 @@ function install_ibm_db() {
   #Cleaning clidriver, m4 and autoconf
   rm -rf ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
 
-
   export IBM_DB_HOME=$BUILD_DIR/dsdriver
 
 }
 
-
+install_ibm_db
 
 
 # fix STACK variable if unset
