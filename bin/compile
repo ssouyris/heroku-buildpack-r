@@ -161,6 +161,8 @@ function install_ibm_db() {
 
 }
 
+uname -a
+
 install_ibm_db
 
 
