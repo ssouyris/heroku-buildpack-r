@@ -135,8 +135,7 @@ echo "CACHE_DIR: $CACHE_DIR"
 echo "ENV_DIR: $ENV_DIR"
 
 
-dirA="$PWD"
-cd "$dirA"
+
 
 #### Install db2 driver
 echo "**** start in directory***********"
@@ -154,13 +153,12 @@ pwd
 echo "***** end in directory *************"
 echo " ----------- cd dsdriver" | indent
 cd dsdriver
-dirB="$PWD"
 echo "**** start in directory***********"
 ls
 pwd
 echo "***** end in directory *************"
-echo " ----------- "$CACHE_DIR"/installDSDriver" | indent
-"$CACHE_DIR/installDSDriver"
+echo " ----------- $BUILDPACK_DIR/dsdriver/installDSDriver" | indent
+"$BUILDPACK_DIR/dsdriver/installDSDriver"
 echo " ----------- ../db2profile" | indent
 ../db2profile
 echo "***** Out Install driver *************"
@@ -169,9 +167,6 @@ ls
 pwd
 echo "***** end in directory *************"
 ####
-
-cd "$dirA"
-
 
 
 
