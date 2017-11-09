@@ -139,6 +139,26 @@ echo "ENV_DIR: $ENV_DIR"
 
 
 
+function install_ibm_db() {
+  # Extracting DS Driver
+  tar -xzf ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
+
+  echo "Installingdsdriver ..."
+  cd $BUILD_DIR/dsdriver
+  ./installDSDriver --prefix=$BUILD_DIR/ds
+  ../db2profile
+  export PATH=$BUILD_DIR/dsdriver/bin:$PATH
+
+  cd $BUILD_DIR
+  #Cleaning clidriver, m4 and autoconf
+  rm -rf ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
+
+
+  export IBM_DB_HOME=$BUILD_DIR/dsdriver
+
+}
+
+
 
 
 # fix STACK variable if unset
