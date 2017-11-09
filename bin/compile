@@ -147,7 +147,7 @@ function install_ibm_db() {
   cd dsdriver
   pwd | indent
   echo "... A" | indent
-  ./installDSDriver --prefix=/dsdriver
+  ./installDSDriver --prefix=dsdriver
   echo "... B" | indent
   ../db2profile
   echo "... C" | indent
