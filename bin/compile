@@ -144,9 +144,12 @@ function install_ibm_db() {
   tar -xzf ibm_data_server_driver_package_linuxx64_v11.1.1.tar.gz
 
   echo "Installingdsdriver ..."
-  cd $BUILD_DIR/dsdriver
+  cd dsdriver
+  echo "... A"
   ./installDSDriver --prefix=$BUILD_DIR/ds
+  echo "... B"
   ../db2profile
+  echo "... C"
   export PATH=$BUILD_DIR/dsdriver/bin:$PATH
 
   cd $BUILD_DIR
