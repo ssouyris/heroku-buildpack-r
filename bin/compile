@@ -159,8 +159,8 @@ echo "**** start in directory***********"
 ls
 pwd
 echo "***** end in directory *************"
-echo " ----------- "$dirB"/installDSDriver" | indent
-"$dirB/installDSDriver"
+echo " ----------- "$BUILD_DIR"/installDSDriver" | indent
+"$BUILD_DIR/installDSDriver"
 echo " ----------- ../db2profile" | indent
 ../db2profile
 echo "***** Out Install driver *************"
