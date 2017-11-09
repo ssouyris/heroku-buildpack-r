@@ -161,9 +161,10 @@ function install_ibm_db() {
 
 }
 
-uname -a
+echo "OS: "| indent
+uname -a | indent
 
-install_ibm_db
+#install_ibm_db
 
 
 # fix STACK variable if unset
