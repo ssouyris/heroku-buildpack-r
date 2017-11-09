@@ -145,8 +145,9 @@ function install_ibm_db() {
 
   echo "Installingdsdriver ..."
   cd dsdriver
+  pwd
   echo "... A"
-  ./installDSDriver --prefix=$BUILD_DIR/ds
+  ./installDSDriver --prefix=/dsdriver
   echo "... B"
   ../db2profile
   echo "... C"
